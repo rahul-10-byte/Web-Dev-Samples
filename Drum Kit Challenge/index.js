@@ -2,57 +2,29 @@
 for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
     document.querySelectorAll(".drum")[i].addEventListener("click", handleClick);
 
+// mouse Click Event
 function handleClick () {
     
-    var buttonInnerValue = this.innerHTML;
+    var buttonInnerValue = this.innerHTML;   
+    makeSound(buttonInnerValue);
 
-    switch (buttonInnerValue) {
-        case "w":
-            var audio = new Audio("./sounds/crash.mp3");
-            audio.play();
-            break;
-        case "a":
-            var audio = new Audio("./sounds/kick-bass.mp3");
-            audio.play();
-            break;
-        case "s":
-            var audio = new Audio("./sounds/snare.mp3");
-            audio.play();
-            break;
-        case "d":
-            var audio = new Audio("./sounds/tom-1.mp3");
-            audio.play();
-            break;
-        case "j":
-            var audio = new Audio("./sounds/tom-2.mp3");
-            audio.play();
-            break;
-        case "k":
-            var audio = new Audio("./sounds/tom-3.mp3");
-            audio.play();
-            break;
-        case "l":
-            var audio = new Audio("./sounds/tom-4.mp3");
-            audio.play();
-            break;    
-        default:
-            console.log(buttonInnerValue);
-            break;
-    }    
-    
-    
+    buttonAnimation(buttonInnerValue);
     // var audio = new Audio("./sounds/tom-4.mp3");
     // audio.play();
-
 }
     
 }
-
+//Keyboard Press Event
 document.addEventListener("keydown", function (event){
-    console.log(event);
-    var keyboardPress = event.key;
+    var keyPress = event.key;
+    makeSound(keyPress);
 
-    switch (keyboardPress) {
+    buttonAnimation(buttonInnerValue);
+
+});
+
+function makeSound(key) {
+    switch (key) {
         case "w":
             var audio = new Audio("./sounds/crash.mp3");
             audio.play();
@@ -82,8 +54,19 @@ document.addEventListener("keydown", function (event){
             audio.play();
             break;    
         default:
-            console.log(keyboardPress);
+            console.log(key);
             break;
     }    
+}
 
-});
+function buttonAnimation (currentKey) {
+    
+    var activeButton = document.querySelector("." + currentKey);
+    
+    activeButton.classList.add("pressed");
+
+    setTimeout( function() {
+        activeButton.classList.remove("pressed");
+    }, 100);
+
+}
