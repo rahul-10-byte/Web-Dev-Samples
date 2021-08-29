@@ -13,3 +13,15 @@ $("h1").click(function () {
 $("body").keypress(function(event) {
     $("h1").text(event.key);
 });  
+
+//before will add the element before the opening tag of next element
+$("h1").before("<button>Say</button>");
+
+//after will add the element after the closing tag of pervious element
+$("h1").after("<button>Say</button>");
+
+//prepend will add the element after the opening tag of the element
+$("h1").prepend("<button>Say</button>");
+
+//append will add the element before the closing tag of the element
+$("h1").append("<button>Say</button>");
