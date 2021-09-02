@@ -1,11 +1,13 @@
 
 for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
+    
     document.querySelectorAll(".drum")[i].addEventListener("click", handleClick);
 
 // mouse Click Event
 function handleClick () {
     
     var buttonInnerValue = this.innerHTML;   
+
     makeSound(buttonInnerValue);
 
     buttonAnimation(buttonInnerValue);
@@ -16,7 +18,9 @@ function handleClick () {
 }
 //Keyboard Press Event
 document.addEventListener("keydown", function (event){
+
     var keyPress = event.key;
+    
     makeSound(keyPress);
 
     buttonAnimation(buttonInnerValue);

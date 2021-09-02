@@ -1,0 +1,49 @@
+body {
+    background:url('./images/pexels-roberto-nickson-2885320.jpg') no-repeat;
+    font-family: 'Hina Mincho', serif;
+
+}
+
+.container {
+    text-align: center;
+    margin: 50px;
+}
+
+.calculator {
+    display: inline-block;
+    padding: 10px;
+    backdrop-filter: blur(1px) saturate(180%);
+    -webkit-backdrop-filter: blur(1px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+}
+
+table {
+    margin: auto;
+}
+
+input {
+    font-size: 2rem;
+    width: 260px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 12px;
+}
+
+button {
+    font-size: 1.8rem;
+    background-color: chartreuse;
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+}
+
+.num {
+    background-color: #e0e0e0;
+}
+
+.oper {
+    background-color: #eb7419;
+}
