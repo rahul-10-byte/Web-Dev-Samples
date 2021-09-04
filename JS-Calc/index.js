@@ -1,5 +1,5 @@
     let screen = document.getElementById('screen');
-    buttons = document.querySelectorAll('button');
+    buttons = document.querySelectorAll('.numpad');
     for(item of buttons){
         item.addEventListener('click', (e) => {
             buttonText = e.target.innerText;

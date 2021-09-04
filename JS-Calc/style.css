@@ -24,9 +24,7 @@ body {
 }
 
 .toogle-theme {
-  background-color: brown;
   width: 50px;
-  border-radius: 12px;
   text-align: center;
   
 }
@@ -39,10 +37,15 @@ body {
 h1 {
   margin-top: 0;
   font-size: 3rem;
+  margin-bottom: 0;
+}
+h4 {
+  margin: 0;
 }
 
 .round {
   border-radius: 12px;
+  background-color: #444cf7;
 }
 
 .calculator {
@@ -67,7 +70,7 @@ input {
   border-radius: 12px;
 }
 
-.equal, button {
+.equal, .oper, .num {
   font-size: 1.8rem;
   background-color: chartreuse;
   width: 64px;
