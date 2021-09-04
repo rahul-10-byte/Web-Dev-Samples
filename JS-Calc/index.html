@@ -4,21 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css" />
+
+    <script src="theme.js"></script>
     <title>Calculator using JS</title>
   </head>
 
   <body>
 
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-      </label>
+    <div class="toogle-theme">
+      <a id="theme-switcher" class="round">Theme</a>
+    </div>
+
 
     <div class="container">
       <h1>Calculator</h1>
@@ -65,4 +67,16 @@
 
     <script src="index.js"></script>
   </body>
+
+  <script>
+    $( ".change" ).on("click", function() {
+        if( $( "body" ).hasClass( "dark" )) {
+            $( "body" ).removeClass( "dark" );
+            $( ".change" ).text( "OFF" );
+        } else {
+            $( "body" ).addClass( "dark" );
+            $( ".change" ).text( "ON" );
+        }
+    });
+</script>
 </html>

@@ -1,11 +1,34 @@
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --background-image: radial-gradient(#444cf7 2px, #e5e5f7 2px);
+
+}
+
+[data-theme="dark"] {
+    --background-color: #3F3F3F;
+    --text-color: #fff;
+    --background-image: radial-gradient(#444cf7 2px, #18181a 2px);
+
+  }
+
 body {
-  background-color: #e5e5f7;
+  background-color: var(--background-color);
+  color: var(--text-color);
   opacity: 0.8;
   background-color: #e5e5f7;
   opacity: 0.8;
-  background-image: radial-gradient(#444cf7 2px, #e5e5f7 2px);
+  background-image: var(--background-image);
   background-size: 40px 40px;
   font-family: "Hina Mincho", serif;
+}
+
+.toogle-theme {
+  background-color: brown;
+  width: 50px;
+  border-radius: 12px;
+  text-align: center;
+  
 }
 
 .container {
@@ -16,6 +39,10 @@ body {
 h1 {
   margin-top: 0;
   font-size: 3rem;
+}
+
+.round {
+  border-radius: 12px;
 }
 
 .calculator {
@@ -40,7 +67,7 @@ input {
   border-radius: 12px;
 }
 
-button {
+.equal, button {
   font-size: 1.8rem;
   background-color: chartreuse;
   width: 64px;
